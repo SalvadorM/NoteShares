@@ -46,7 +46,26 @@ router.post('/new',(req,res)=> {
 });
    
       
-
+//@route    GET api/comments
+//@desc     GET a comment
+router.get('/noteComments/:noteId',(req,res)=> {
+    const noteId = req.params.noteId;
+  
+    // console.log(req.user);
+    // console.log(req.user.id);
+   
+    models.Comment.findAll({ where: {noteId},
+    })
+    .then ( responce => {
+        console.log(responce)
+        res.json(responce)
+    })
+    .catch(err => {
+        console.log('---error----')
+        console.log(err)
+    })
+});
+   
 
 //@route    Update api/notes/:id
 //@desc     Update a note to database

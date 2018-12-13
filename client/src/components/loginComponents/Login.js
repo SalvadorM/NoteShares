@@ -64,9 +64,10 @@ class Login extends Component{
             return <Redirect to="/user" />;
         } else {
             return(
-                 <div className="w3-container w3-display-middle">
-                 <div className="w3-card-4">
-                 <div className="w3-container w3-blue">
+                <div className="w3-container w3-display-middle">
+                 <div id="login"className="w3-card-4 size w3-display-middle">
+                 <div className="w3-container">
+                    <h1>Log In</h1>
                     <br></br>
                 </div>
                  <Error message={error} />
@@ -95,6 +96,8 @@ class Login extends Component{
                 </div>
                  </div>
             );
+
+           
         }
     }
 }

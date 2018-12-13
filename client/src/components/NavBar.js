@@ -16,7 +16,7 @@ const NavBar = () => {
                 <Link className="w3-bar-item w3-button w3-mobile w3-hover-blue" to="/user"> User</Link>
                 <Link className="w3-bar-item w3-button w3-mobile w3-hover-blue" to="/notes"> Notes</Link>
                 <Link className="w3-bar-item w3-button w3-mobile w3-hover-blue" to="/search"> Search</Link>
-                <LogOut />
+                <LogOut  />
             </span>
         </nav> 
 

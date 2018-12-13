@@ -118,9 +118,9 @@ class SignUp extends Component {
         } else {
             return(
                 <div className="w3-container w3-display-middle">
-                <div className="w3-card-4">
-                <div className="w3-container w3-blue">
-                    <br></br>
+                <div id ="login"className="w3-card-4 size1 w3-display-middle">
+                <div className="w3-container ">
+                    <h1>Sign up</h1>
                 </div>
                 <Error message={error}/>
                 <form className="w3-container w3-center" name="register" onSubmit={ (e) => this.onSubmit(e)}>

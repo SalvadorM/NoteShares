@@ -10,8 +10,11 @@ function Display(props) {
     return (
         <div>
             <div className="w3-card-4">
-            <h1><Link to={noteURL}>link</Link></h1>
             <h1>{note.title}</h1>
+            <div>
+            <Link to={noteURL}> <p><button className="w3-button w3-padding-large w3-white w3-border readmore"><b>READ MORE »</b></button></p> </Link>
+            </div>
+            
             </div>
         </div>
     )

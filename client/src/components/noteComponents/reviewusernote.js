@@ -10,11 +10,16 @@ function Display(props) {
     let date =  note.updatedAt.substr(0,10);
     // console.log(note)
     return (
-        <div className="w3-card-4">
-            <h1>Title: <Link to={noteURL}>{note.title}</Link></h1>
-            <p>last update: {date}</p>
-            <p>image : {note.image}</p>
-        
+        <div className="w3-card-2">
+
+            
+
+            <h1>{note.title}</h1>
+            <p>last update: {date}</p> 
+
+            <div>
+            <Link to={noteURL}> <p><button className="w3-button w3-padding-large w3-white w3-border readmore"><b>READ MORE »</b></button></p> </Link>
+            </div>
         </div>
     )
 }
@@ -50,13 +55,21 @@ class ViewUserNotes extends Component {
 
             const notes = this.state.notes.map( note => {
                 return(       
-                    <Display key={note.id} note={note} />    
+               
+                        <Display key={note.id} note={note} />    
+                
                 );
             })
      
             return (
 
-                <div className="w3-container w3-center">{notes}</div>
+                <div className="w3-container w3-center">
+                <div>
+                    {notes}
+                </div>
+                
+                
+                </div>
 
             );
         }

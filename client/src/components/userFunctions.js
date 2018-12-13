@@ -96,3 +96,9 @@ export const imagesCall = formData => {
         headers: { "X-Requested-With": "XMLHttpRequest" },
       })
 }
+
+export const getAllComments= noteId => {
+    let URL = 'http://localhost:3001/api/comments/noteComments/' + noteId
+    return axios
+    .get(URL);
+}

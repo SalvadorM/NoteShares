@@ -22,7 +22,7 @@ class RenderNote extends Component {
                   <h1>This notes created by {_username} </h1>
                 </div>
                 <div id="bottom-section" className="w3-panel w3-border w3-light-grey w3-round-large">
-                   <IndvidualNote id={id} />
+                <IndvidualNote key={id} noteId ={id} id={id} />
                     
                 </div>
                 <Comment findAllByid ={id} userid={userid}/>
